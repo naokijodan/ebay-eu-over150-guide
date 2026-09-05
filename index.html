@@ -1,0 +1,234 @@
+<title>EU・イギリス宛の注文が「しきい値」を超えたら？ 同梱・VAT・関税の判断ガイド</title>
+<style>
+:root{
+  --bg:#FAF9F6; --card:#fff; --blue:#E8F1FB; --green:#E6F4EA; --yellow:#FFF4D6; --red:#FDE8E8;
+  --text:#333; --blue-d:#2B5A8C; --green-d:#2E7D4F; --red-d:#C0392B;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.7;padding:20px 14px 60px}
+.wrap{max-width:900px;margin:0 auto}
+h1{font-size:1.35rem;color:var(--blue-d);text-align:center;margin:6px 0 22px;line-height:1.5}
+h2{font-size:1.05rem;color:var(--blue-d);background:var(--blue);display:inline-block;padding:8px 18px;border-radius:20px;margin:34px 0 14px}
+section{margin-bottom:8px}
+p.cap{background:var(--card);border-radius:16px;padding:14px 18px;margin:10px 0}
+.hero{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.hcard{flex:1 1 240px;background:var(--card);border-radius:22px;padding:20px 18px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.hbadge{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-weight:bold;color:#fff}
+.hbadge.b1{background:var(--green-d)} .hbadge.b2{background:#D9A441} .hbadge.b3{background:var(--red-d)}
+.hline{background:var(--yellow);border-radius:16px;padding:10px 18px;text-align:center;font-size:.92rem}
+figure{margin:0;background:var(--card);border-radius:22px;padding:14px;overflow-x:auto}
+figure{overflow-x:auto;-webkit-overflow-scrolling:touch}figure svg{width:100%;height:auto;display:block;min-width:600px}
+.notebox{border-radius:16px;padding:14px 18px;margin:10px 0;font-size:.92rem}
+.note-red{background:var(--red);color:var(--red-d)}
+.note-yellow{background:var(--yellow);display:inline-block;font-size:.85rem;padding:6px 14px;border-radius:12px}
+.tablewrap{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);border-radius:16px;overflow:hidden;font-size:.9rem}
+th,td{padding:8px 12px;border-bottom:1px solid #eee;text-align:center;white-space:nowrap}
+th{background:var(--blue);color:var(--blue-d)}
+.subhead{font-weight:bold;color:var(--blue-d);font-size:.95rem;margin:16px 0 8px}
+.vattable{width:100%;border-collapse:collapse;background:var(--card);border-radius:16px;overflow:hidden;font-size:.85rem}
+.vattable td{padding:7px 10px;border-bottom:1px solid #eee;text-align:center;white-space:nowrap}
+.vattable tr:last-child td{border-bottom:none}
+.vat-hi{background:var(--red);color:var(--red-d);font-weight:bold}
+.vat-fx{background:var(--yellow)}
+.vat-lo{background:var(--green);color:var(--green-d);font-weight:bold}
+.sources{background:var(--card);border-radius:16px;padding:16px 20px}
+.sources a{display:block;color:var(--blue-d);margin:6px 0;word-break:break-all}
+.sources span{display:block;color:#666;margin:6px 0}
+footer p{text-align:center;font-size:.85rem;color:#777;margin-top:18px}
+</style>
+
+<div class="wrap">
+<h1>EU・イギリス宛の注文が「しきい値」を超えたら？<br>同梱・VAT・関税の判断ガイド</h1>
+
+<section>
+<div class="hero">
+  <div class="hcard"><div class="hbadge b1">◎</div>同時購入（注文番号が1つ）なら、気にせず同梱でOK</div>
+  <div class="hcard"><div class="hbadge b2">△</div>別々の注文をこちらで同梱するときだけ注意</div>
+  <div class="hcard"><div class="hbadge b3">×</div>VAT支払い済みの商品を同梱してしきい値を超えるなら、同梱しない</div>
+</div>
+<div class="hline">しきい値＝EU 150ユーロ（約$174）／イギリス 135ポンド（約$183）。2026年9月4日の為替。</div>
+</section>
+
+<section>
+<h2>1. しきい値の上と下で何が変わる？</h2>
+<figure>
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Hiragino Sans,Noto Sans JP,sans-serif">
+<text x="220" y="70" text-anchor="middle" font-size="20" font-weight="bold" fill="#2E7D4F">しきい値以下</text>
+<text x="580" y="70" text-anchor="middle" font-size="20" font-weight="bold" fill="#C0392B">しきい値超</text>
+<rect x="40" y="110" width="360" height="44" rx="22" fill="#E6F4EA"/>
+<rect x="400" y="110" width="360" height="44" rx="22" fill="#FDE8E8"/>
+<line x1="400" y1="95" x2="400" y2="169" stroke="#333" stroke-width="2"/>
+<text x="400" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">EU €150 / UK £135</text>
+<rect x="40" y="190" width="340" height="150" rx="20" fill="#E6F4EA"/>
+<text x="60" y="220" font-size="15" fill="#2E7D4F"><tspan x="60" dy="0">関税：EUはコード1つにつき</tspan><tspan x="60" dy="22">3ユーロ定額（前徴収＝DDP）</tspan><tspan x="60" dy="30">VAT：eBayが決済時に徴収済み</tspan><tspan x="60" dy="22">バイヤー：受取時に払うものなし</tspan></text>
+<rect x="420" y="190" width="340" height="180" rx="20" fill="#FDE8E8"/>
+<text x="440" y="220" font-size="15" fill="#C0392B"><tspan x="440" dy="0">関税：品目ごとの税率</tspan><tspan x="440" dy="22">VAT：受取時にバイヤーが払う</tspan><tspan x="440" dy="22">（ハンガリー27%、英国20%）</tspan><tspan x="440" dy="30">通関手数料も別途（DDU）</tspan><tspan x="440" dy="30" font-size="13">SpeedPAK Economy不可（上限</tspan><tspan x="440" dy="18" font-size="13">EU €150／UK £135）</tspan><tspan x="440" dy="18" font-size="13">→Expedited（クーリエ）で送る</tspan></text>
+</svg>
+</figure>
+<p class="cap">判定額は「1つの荷物に入る商品の価値の合計」。販売価格に送料を含めているなら、その荷物の見積もり送料を商品数で按分して引いた額で申告する（代行業者オレンジコネックスに公式確認済み）。引いてよいのは実際にかかる送料分だけ。</p>
+</section>
+
+<section>
+<h2>2. 判定は「注文」単位</h2>
+<figure>
+<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Hiragino Sans,Noto Sans JP,sans-serif">
+<text x="180" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">別々に注文</text>
+<text x="600" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">まとめて注文（1つの注文番号）</text>
+<g>
+<rect x="40" y="50" width="280" height="60" rx="16" fill="#E6F4EA"/>
+<text x="60" y="85" font-size="15" fill="#2E7D4F">A　$80</text>
+<rect x="240" y="62" width="60" height="24" rx="12" fill="#fff" stroke="#2E7D4F"/><text x="270" y="79" text-anchor="middle" font-size="11" fill="#2E7D4F">VAT済</text>
+</g>
+<g>
+<rect x="40" y="120" width="280" height="60" rx="16" fill="#E6F4EA"/>
+<text x="60" y="155" font-size="15" fill="#2E7D4F">B　$65</text>
+<rect x="240" y="132" width="60" height="24" rx="12" fill="#fff" stroke="#2E7D4F"/><text x="270" y="149" text-anchor="middle" font-size="11" fill="#2E7D4F">VAT済</text>
+</g>
+<g>
+<rect x="40" y="190" width="280" height="60" rx="16" fill="#E6F4EA"/>
+<text x="60" y="225" font-size="15" fill="#2E7D4F">C　$128</text>
+<rect x="240" y="202" width="60" height="24" rx="12" fill="#fff" stroke="#2E7D4F"/><text x="270" y="219" text-anchor="middle" font-size="11" fill="#2E7D4F">VAT済</text>
+</g>
+<rect x="440" y="50" width="320" height="200" rx="20" fill="#FDE8E8"/>
+<text x="460" y="85" font-size="15" fill="#C0392B"><tspan x="460" dy="0">A $80／B $65</tspan><tspan x="460" dy="24">C $128／D $304</tspan><tspan x="460" dy="30" font-weight="bold">合計 $577</tspan></text>
+<rect x="600" y="180" width="130" height="30" rx="15" fill="#fff" stroke="#C0392B"/><text x="665" y="200" text-anchor="middle" font-size="13" fill="#C0392B">VAT未徴収</text>
+</svg>
+</figure>
+<p class="cap">eBayは1回の決済でできた注文の合計額（送料込み）でしきい値を判定する。別の日に買っても後でまとめて支払えば1つの注文番号になる。Seller Hubの注文番号で見分ける。</p>
+</section>
+
+<section>
+<h2>3. 発送前の判断フロー</h2>
+<figure>
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Hiragino Sans,Noto Sans JP,sans-serif">
+<rect x="290" y="20" width="320" height="56" rx="20" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="450" y="54" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">注文番号は同じ？</text>
+<line x1="360" y1="76" x2="220" y2="140" stroke="#999" stroke-width="2"/>
+<text x="250" y="115" font-size="13" fill="#333">はい</text>
+<line x1="540" y1="76" x2="680" y2="140" stroke="#999" stroke-width="2"/>
+<text x="600" y="115" font-size="13" fill="#333">いいえ（別々の注文）</text>
+<rect x="60" y="140" width="320" height="60" rx="18" fill="#E8F1FB"/>
+<text x="220" y="175" text-anchor="middle" font-size="14" font-weight="bold" fill="#2B5A8C">合計はしきい値超？</text>
+<rect x="520" y="140" width="320" height="60" rx="18" fill="#E8F1FB"/>
+<text x="680" y="175" text-anchor="middle" font-size="14" font-weight="bold" fill="#2B5A8C">まとめるとしきい値超？</text>
+<line x1="140" y1="200" x2="90" y2="290" stroke="#999" stroke-width="2"/><text x="70" y="250" font-size="12">はい</text>
+<line x1="300" y1="200" x2="340" y2="290" stroke="#999" stroke-width="2"/><text x="330" y="250" font-size="12">いいえ</text>
+<line x1="600" y1="200" x2="560" y2="290" stroke="#999" stroke-width="2"/><text x="545" y="250" font-size="12">はい</text>
+<line x1="760" y1="200" x2="800" y2="290" stroke="#999" stroke-width="2"/><text x="790" y="250" font-size="12">いいえ</text>
+<rect x="10" y="290" width="190" height="170" rx="18" fill="#FDE8E8"/>
+<text x="30" y="315" font-size="12.5" fill="#C0392B"><tspan x="30" dy="0">1個口でDDU。</tspan><tspan x="30" dy="20">バイヤーが受取時に</tspan><tspan x="30" dy="20">VAT＋関税を払う。</tspan><tspan x="30" dy="20">分けるメリットなし</tspan><tspan x="30" dy="22" font-size="11">Expeditedで送る</tspan><tspan x="30" dy="14" font-size="11">（Economy不可）</tspan></text>
+<rect x="250" y="290" width="190" height="150" rx="18" fill="#E6F4EA"/>
+<text x="270" y="315" font-size="12.5" fill="#2E7D4F"><tspan x="270" dy="0">1個口でDDP。</tspan><tspan x="270" dy="20">IOSS番号（UKは</tspan><tspan x="270" dy="20">eBayのVAT番号）を</tspan><tspan x="270" dy="20">配送業者に伝える</tspan></text>
+<rect x="470" y="290" width="190" height="150" rx="18" fill="#FDE8E8"/>
+<text x="490" y="325" font-size="12.5" fill="#C0392B"><tspan x="490" dy="0">同梱しない。</tspan><tspan x="490" dy="20">しきい値以下の荷物</tspan><tspan x="490" dy="20">に分けて送る</tspan></text>
+<rect x="710" y="290" width="180" height="150" rx="18" fill="#E6F4EA"/>
+<text x="725" y="325" font-size="12.5" fill="#2E7D4F"><tspan x="725" dy="0">同梱OK。</tspan><tspan x="725" dy="20">1個口DDPで</tspan><tspan x="725" dy="20">IOSS番号を伝える</tspan></text>
+</svg>
+</figure>
+<div class="notebox note-red">分けると二重になるのではなく、まとめると二重になります。VAT徴収済みの荷物がしきい値を超えると、通関でVATがもう一度かかります。</div>
+</section>
+
+<section>
+<h2>4. 実例</h2>
+<figure>
+<svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Hiragino Sans,Noto Sans JP,sans-serif">
+<rect x="30" y="30" width="320" height="230" rx="20" fill="#FDE8E8"/>
+<text x="50" y="60" font-size="14" font-weight="bold" fill="#333">1つの注文番号</text>
+<text x="50" y="90" font-size="14" fill="#333"><tspan x="50" dy="0">A $80　B $65</tspan><tspan x="50" dy="24">C $128　D $304</tspan><tspan x="50" dy="30" font-weight="bold">合計 $577 ≒ €497</tspan></text>
+<rect x="180" y="205" width="140" height="30" rx="15" fill="#fff" stroke="#C0392B"/><text x="250" y="225" text-anchor="middle" font-size="13" fill="#C0392B">VAT未徴収</text>
+<line x1="360" y1="145" x2="440" y2="145" stroke="#333" stroke-width="2" marker-end="url(#ah)"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#333"/></marker></defs>
+<rect x="450" y="60" width="320" height="90" rx="20" fill="#FDE8E8"/>
+<text x="610" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#C0392B">1個口・DDU（Expedited）</text>
+<text x="610" y="185" text-anchor="middle" font-size="13" fill="#333"><tspan x="610" dy="0">申告額 $551.4</tspan><tspan x="610" dy="20">（同梱の見積もり送料 4,000円を</tspan><tspan x="610" dy="18">4商品で按分して引いた額）</tspan></text>
+</svg>
+</figure>
+<p class="cap">この例は4商品が1つの注文だったので、そのまま1個口で送ればよい。バイヤーは受取時にハンガリーのVAT27%＋関税＋通関手数料を払う。もし別々の注文でそれぞれVAT徴収済みなら、各荷物の申告額がしきい値以下になる組み合わせに分ける（例: D単独／C＋B／A の3個口）。<br><span class="note-yellow">金額はすべて説明用の参考例</span></p>
+</section>
+
+<section>
+<h2>5. しきい値超の税額の目安</h2>
+<figure>
+<svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Hiragino Sans,Noto Sans JP,sans-serif">
+<rect x="150" y="87" width="140" height="203" fill="#E8F1FB"/>
+<text x="220" y="195" text-anchor="middle" font-size="13" fill="#2B5A8C">商品価値<tspan x="220" dy="16">€475</tspan></text>
+<rect x="150" y="73" width="140" height="14" fill="#BFDCF7"/>
+<line x1="150" y1="80" x2="118" y2="80" stroke="#2B5A8C" stroke-width="1.2"/>
+<text x="112" y="84" text-anchor="end" font-size="12" fill="#2B5A8C">送料 €22</text>
+<rect x="150" y="59" width="140" height="14" fill="#FFF4D6"/>
+<line x1="150" y1="66" x2="118" y2="44" stroke="#8a6d1a" stroke-width="1.2"/>
+<text x="112" y="34" text-anchor="end" font-size="11" fill="#8a6d1a"><tspan x="112" dy="0">関税 €13</tspan><tspan x="112" dy="14">（トレカ2.7%）</tspan></text>
+<rect x="150" y="0" width="140" height="59" fill="#FDE8E8"/>
+<text x="220" y="28" text-anchor="middle" font-size="12" fill="#C0392B">VAT 27%<tspan x="220" dy="16">≒ €138</tspan></text>
+<path d="M300,87 h20 v203 h-20" fill="none" stroke="#2B5A8C" stroke-width="1.5"/>
+<text x="330" y="205" font-size="13" font-weight="bold" fill="#2B5A8C">課税ベース €510</text>
+<path d="M300,2 h20 v71 h-20" fill="none" stroke="#C0392B" stroke-width="1.5"/><text x="330" y="42" font-size="12" font-weight="bold" fill="#C0392B">税金</text>
+<rect x="400" y="10" width="260" height="60" rx="18" fill="#FDE8E8"/>
+<text x="530" y="35" text-anchor="middle" font-size="13" fill="#C0392B">税金合計 ≒ €151</text>
+<text x="530" y="55" text-anchor="middle" font-size="11" fill="#C0392B">（関税13＋VAT138、手数料除く）</text>
+</svg>
+</figure>
+<p class="cap"><strong>品目別の関税率（しきい値超のときだけ関係する）</strong></p>
+<div class="tablewrap"><table>
+<tr><th>品目</th><th>コード</th><th>EU</th><th>イギリス</th></tr>
+<tr><td>トレーディングカード</td><td>9504 40 00</td><td>2.7%</td><td>2%</td></tr>
+<tr><td>人型フィギュア・人形</td><td>9503 00 21</td><td>4.7%</td><td>4%</td></tr>
+<tr><td>動物・人間以外のキャラクター</td><td>9503 00 49</td><td>0%</td><td>0%</td></tr>
+<tr><td>プラスチック製の置物</td><td>3926 40 00</td><td>6.5%</td><td>6%</td></tr>
+<tr><td>腕時計（電池式・針表示）</td><td>9102 11 00</td><td>1個€0.30〜0.80</td><td>1個£0.20</td></tr>
+<tr><td>銀のジュエリー</td><td>7113 11 00</td><td>2.5%</td><td>2%</td></tr>
+<tr><td>金属製アクセサリー（貴金属以外）</td><td>7117 19 00</td><td>4%</td><td>4%</td></tr>
+<tr><td>書籍・漫画</td><td>4901 99 00</td><td>0%</td><td>0%</td></tr>
+<tr><td>ゲーム機・ゲームソフト</td><td>9504 50 00</td><td>0%</td><td>0%</td></tr>
+<tr><td>シルクのスカーフ</td><td>6214 10 00</td><td>8%</td><td>8%</td></tr>
+</table></div>
+<p class="cap">EUの率は税率検索サイトの記載、イギリスの率は英国政府の関税表（公式）。しきい値以下ならEUは定額3ユーロ、イギリスは関税なし。率が関係するのはしきい値超のときだけ。品目が変わっても関税は数%の差。VATのほうがずっと大きい。</p>
+</section>
+
+<section>
+<h2>6. 国ごとの違い</h2>
+<figure>
+<svg viewBox="0 0 800 370" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Hiragino Sans,Noto Sans JP,sans-serif">
+<rect x="20" y="20" width="240" height="310" rx="22" fill="#E8F1FB"/>
+<text x="140" y="50" text-anchor="middle" font-size="15" font-weight="bold" fill="#2B5A8C">EU 27カ国</text>
+<text x="40" y="82" font-size="13" fill="#2B5A8C"><tspan x="40" dy="0">しきい値 €150</tspan><tspan x="40" dy="26">VAT 各国税率</tspan><tspan x="40" dy="20">（ハンガリー27%）</tspan><tspan x="40" dy="28">関税 以下は</tspan><tspan x="40" dy="20">3ユーロ定額</tspan><tspan x="40" dy="28">Economyの上限</tspan><tspan x="40" dy="20">€150。超は</tspan><tspan x="40" dy="20">Expedited</tspan></text>
+<rect x="280" y="20" width="240" height="310" rx="22" fill="#E6F4EA"/>
+<text x="400" y="50" text-anchor="middle" font-size="15" font-weight="bold" fill="#2E7D4F">イギリス</text>
+<text x="300" y="82" font-size="12.5" fill="#2E7D4F"><tspan x="300" dy="0">しきい値 £135</tspan><tspan x="300" dy="22">VAT 20%</tspan><tspan x="300" dy="28">以下は関税なし</tspan><tspan x="300" dy="20">受取時の支払いなし</tspan><tspan x="300" dy="26">超はExpeditedのみ</tspan><tspan x="300" dy="20">受取時にVAT20%</tspan><tspan x="300" dy="20">＋関税＋手数料</tspan><tspan x="300" dy="26">EUのような関税の</tspan><tspan x="300" dy="20">前徴収もない</tspan><tspan x="300" dy="26">SpeedPAKのDDP</tspan><tspan x="300" dy="18">必須の対象外</tspan></text>
+<rect x="540" y="20" width="240" height="310" rx="22" fill="#FFF4D6"/>
+<text x="660" y="50" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a6d1a">フランス（例外）</text>
+<text x="560" y="82" font-size="12.5" fill="#8a6d1a"><tspan x="560" dy="0">VATは金額にかかわらず</tspan><tspan x="560" dy="20">eBayが決済時に徴収</tspan><tspan x="560" dy="26">→同梱してもVATの</tspan><tspan x="560" dy="20">二重払いなし</tspan><tspan x="560" dy="30">関税判定（€150）は</tspan><tspan x="560" dy="20">他のEUと同じ</tspan></text>
+</svg>
+</figure>
+<p class="subhead">標準VAT率の一覧（EU27＋イギリス）</p>
+<div class="tablewrap"><table class="vattable">
+<tr><td>オーストリア 20%</td><td>ベルギー 21%</td><td>ブルガリア 20%</td><td>クロアチア 25%</td></tr>
+<tr><td>キプロス 19%</td><td>チェコ 21%</td><td>デンマーク 25%</td><td>エストニア 24%</td></tr>
+<tr><td>フィンランド 25.5%</td><td class="vat-fx">フランス 20%</td><td>ドイツ 19%</td><td>ギリシャ 24%</td></tr>
+<tr><td class="vat-hi">ハンガリー 27%</td><td>アイルランド 23%</td><td>イタリア 22%</td><td>ラトビア 21%</td></tr>
+<tr><td>リトアニア 21%</td><td class="vat-lo">ルクセンブルク 17%</td><td>マルタ 18%</td><td>オランダ 21%</td></tr>
+<tr><td>ポーランド 23%</td><td>ポルトガル 23%</td><td>ルーマニア 21%</td><td>スロバキア 23%</td></tr>
+<tr><td>スロベニア 22%</td><td>スペイン 21%</td><td>スウェーデン 25%</td><td>イギリス 20%</td></tr>
+</table></div>
+<p class="cap">しきい値超の荷物は、この率のVATを商品価値＋送料＋関税に対して受取時に払う。2026年1月時点の標準税率<br>しきい値・VAT率・関税の扱いは国ごとに異なる。フランスはVATの二重払いが起きない例外。</p>
+</section>
+
+<section>
+<h2>7. 出典</h2>
+<div class="sources">
+<a href="https://www.ebay.com/help/selling/selling/vat-obligations-eu?id=4650">eBayヘルプ</a>
+<a href="https://export.ebay.com/en/fees-regulations-policies/taxes/vat-eu-2021/">eBay Export</a>
+<a href="https://taxation-customs.ec.europa.eu/customs/customs-procedures-import-and-export/customs-operations/customs-formalities-low-value-consignments_en">欧州委員会</a>
+<a href="https://www.gov.uk/guidance/vat-and-overseas-goods-sold-directly-to-customers-in-the-uk">英国政府HMRC</a>
+<a href="https://www.trade-tariff.service.gov.uk/">英国関税表</a>
+<a href="https://www.posta.hu/custom_related_questions">Magyar Posta</a>
+<a href="https://ebay.co.jp/speedpak/eu-ddp">eBay Japan EU DDP</a>
+<a href="https://celna24.pl/en/customs-tariff/950440">税率検索</a>
+<span>eBay SpeedPAK Economy 料金ガイド（2026-07-30発効、PDF）</span>
+<a href="https://taxfoundation.org/data/all/eu/value-added-tax-vat-rates-europe/">Tax Foundation: VAT Rates in Europe 2026</a>
+</div>
+</section>
+
+<footer><p>数値は2026年9月時点。為替・税率・手数料は変わるため発送時に最新を確認。</p></footer>
+</div>
